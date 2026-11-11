@@ -84,7 +84,7 @@
 
 <!-- ============ PRICE NOTE ============ -->
 <div class="wrap">
-  <div style="background:var(--pink);border-radius:999px;padding:.9rem 1.6rem;display:flex;gap:1.2rem;align-items:center;justify-content:center;flex-wrap:wrap;font-size:.84rem">
+  <div class="pill-note" style="background:var(--pink);border-radius:999px;padding:.9rem 1.6rem;display:flex;gap:1.2rem;align-items:center;justify-content:center;flex-wrap:wrap;font-size:.84rem">
     <span style="font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--crimson);font-size:.72rem">Live pricing</span>
     <span style="color:var(--cocoa)">Prices below are the current DoorDash menu prices, set by the shop.</span>
     <a href="https://www.doordash.com/store/the-ice-cream-shop-fresno-39131541/94336551/" target="_blank" rel="noopener" style="color:var(--crimson);font-weight:700;text-decoration:underline">See full menu →</a>
@@ -97,24 +97,21 @@
     <div class="panel reveal">
       <div class="panel-title"><span class="eyebrow solo" style="margin:0">Most Ordered</span></div>
       <div class="grid g3">
-        <article class="card" id="shakes">
-          <div class="ph"><img src="assets/img/shakes.png" alt="Milkshakes"></div>
-          <h3>Milkshake</h3>
-          <p>Thick, creamy and hand-spun. Classic and seasonal flavors, topped with whipped cream.</p>
-          <span class="price">$10.39+<small>size &amp; flavor options</small></span>
-        </article>
-        <article class="card" id="dubai">
-          <div class="ph"><img src="assets/img/fruitcup.png" alt="Dubai cup"></div>
-          <h3>Dubai Cup</h3>
-          <p>Our showstopper — pistachio cream, crunchy kataifi, chocolate and fresh strawberries.</p>
-          <span class="price">$19.49<small>mini $10.39</small></span>
-        </article>
-        <article class="card" id="scoops">
-          <div class="ph"><img src="assets/img/scoop_cookies.png" alt="Two ice cream scoops"></div>
-          <h3>2 Ice Cream Scoops</h3>
-          <p>Pick any two flavors, in a cup or a fresh waffle cone.</p>
-          <span class="price">$10.39<small>3 scoops $12.99</small></span>
-        </article>
+        <a class="card" href="item-dubai-cup.html">
+          <div class="ph"><img src="assets/img/fruitcup.png" alt="Dubai Cup" loading="lazy"></div>
+          <h3>Dubai Cup</h3><p>The best Dubai cup in Fresno</p>
+          <span class="price">$19.49<small>DoorDash price</small></span>
+        </a>
+        <a class="card" href="item-milkshake.html">
+          <div class="ph"><img src="assets/img/shakes.png" alt="Milkshake" loading="lazy"></div>
+          <h3>Milkshake</h3><p>The best milkshake on Fowler Ave</p>
+          <span class="price">$10.39+<small>from · size & flavor options</small></span>
+        </a>
+        <a class="card" href="item-two-scoops.html">
+          <div class="ph"><img src="assets/img/scoop_cookies.png" alt="2 Ice Cream Scoops" loading="lazy"></div>
+          <h3>2 Ice Cream Scoops</h3><p>The best two scoops you'll pick today</p>
+          <span class="price">$10.39<small>DoorDash price</small></span>
+        </a>
       </div>
     </div>
   </div>
@@ -126,31 +123,31 @@
     <div class="panel reveal">
       <div class="panel-title"><span class="eyebrow solo" style="margin:0">Our Menu</span></div>
       <div class="grid g5">
-        <article class="card" id="cones">
-          <div class="ph"><img src="assets/img/cone_cookies.png" alt="Premium waffle cone"></div>
-          <h3>Premium Cones</h3><p>Hand-scooped happiness in a crisp waffle cone.</p>
-          <span class="price">$10.39<small>2 scoops</small></span>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="assets/img/shakes.png" alt="Loaded shakes"></div>
-          <h3>Loaded Shakes</h3><p>Thick, creamy, and topped just right.</p>
-          <span class="price">$10.39+<small>starting at</small></span>
-        </article>
-        <article class="card" id="slushies">
-          <div class="ph"><img src="assets/img/mangocup.png" alt="Slushy"></div>
-          <h3>Slushies</h3><p>Ice-cold and fruity, straight from the machine.</p>
-          <span class="price">$7.79+<small>starting at</small></span>
-        </article>
-        <article class="card" id="sundaes">
-          <div class="ph"><img src="assets/img/brownie.png" alt="Brownie sundae"></div>
-          <h3>Brownie Sundae</h3><p>Warm brownie, vanilla ice cream and chocolate drizzle.</p>
-          <span class="price">In store<small>ask at the counter</small></span>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="assets/img/cone_triple.png" alt="Three scoops"></div>
-          <h3>3 Ice Cream Scoops</h3><p>Three flavors, one very good decision.</p>
-          <span class="price">$12.99<small>cup or cone</small></span>
-        </article>
+        <a class="card" href="item-three-scoops.html">
+          <div class="ph"><img src="assets/img/cone_triple.png" alt="3 Ice Cream Scoops" loading="lazy"></div>
+          <h3>3 Ice Cream Scoops</h3><p>The best value on the whole board</p>
+          <span class="price">$12.99<small>DoorDash price</small></span>
+        </a>
+        <a class="card" href="item-mini-dubai-cup.html">
+          <div class="ph"><img src="assets/img/fruitcup.png" alt="Mini Dubai Cup" loading="lazy"></div>
+          <h3>Mini Dubai Cup</h3><p>The best way to try our best seller</p>
+          <span class="price">$10.39<small>DoorDash price</small></span>
+        </a>
+        <a class="card" href="item-slushy.html">
+          <div class="ph"><img src="assets/img/mangocup.png" alt="Slushy" loading="lazy"></div>
+          <h3>Slushy</h3><p>The best cool-down in Fresno</p>
+          <span class="price">$7.79+<small>from · size options</small></span>
+        </a>
+        <a class="card" href="item-waffle-cone.html">
+          <div class="ph"><img src="assets/img/cone_cookies.png" alt="Waffle Cone" loading="lazy"></div>
+          <h3>Waffle Cone</h3><p>The best cone is worth the upgrade</p>
+          <span class="price">In store<small>Cone upgrade on any scoops</small></span>
+        </a>
+        <a class="card" href="item-brownie-sundae.html">
+          <div class="ph"><img src="assets/img/brownie.png" alt="Brownie Sundae" loading="lazy"></div>
+          <h3>Brownie Sundae</h3><p>The best warm-and-cold thing we make</p>
+          <span class="price">In store<small>Ask at the counter</small></span>
+        </a>
       </div>
     </div>
   </div>
@@ -163,13 +160,26 @@
       <div class="panel-title"><span class="eyebrow solo" style="margin:0">Flavors &amp; Toppings</span></div>
       <p class="center" style="color:var(--muted);margin:-.4rem 0 2rem">Lovingly crafted flavors and toppings to make it yours.</p>
       <div class="flavors">
-        <div class="flavor"><div class="ph"><img src="assets/img/scoop_cookies.png" alt="Cookies and cream"></div><span>Cookies &amp; Cream</span></div>
-        <div class="flavor"><div class="ph"><img src="assets/img/mangocup.png" alt="Mango"></div><span>Mango</span></div>
-        <div class="flavor"><div class="ph"><img src="assets/img/scoop_strawberry.png" alt="Strawberry"></div><span>Strawberry</span></div>
-        <div class="flavor"><div class="ph"><img src="assets/img/scoop_chocolate.png" alt="Chocolate"></div><span>Chocolate</span></div>
-        <div class="flavor"><div class="ph"><img src="assets/img/scoop_vanilla.png" alt="Vanilla"></div><span>Vanilla</span></div>
-        <div class="flavor"><div class="ph"><img src="assets/img/brownie.png" alt="Brownie"></div><span>Brownie</span></div>
-        <div class="flavor"><div class="ph"><img src="assets/img/fruitcup.png" alt="Pistachio kataifi"></div><span>Pistachio</span></div>
+        <a class="flavor" href="item-vanilla.html">
+          <div class="ph"><img src="assets/img/scoop_vanilla.png" alt="Vanilla" loading="lazy"></div>
+          <span>Vanilla</span>
+        </a>
+        <a class="flavor" href="item-cookies-and-cream.html">
+          <div class="ph"><img src="assets/img/scoop_cookies.png" alt="Cookies & Cream" loading="lazy"></div>
+          <span>Cookies & Cream</span>
+        </a>
+        <a class="flavor" href="item-strawberry.html">
+          <div class="ph"><img src="assets/img/scoop_strawberry.png" alt="Strawberry" loading="lazy"></div>
+          <span>Strawberry</span>
+        </a>
+        <a class="flavor" href="item-chocolate.html">
+          <div class="ph"><img src="assets/img/scoop_chocolate.png" alt="Chocolate" loading="lazy"></div>
+          <span>Chocolate</span>
+        </a>
+        <a class="flavor" href="item-mango-sorbet.html">
+          <div class="ph"><img src="assets/img/mangocup.png" alt="Mango Sorbet" loading="lazy"></div>
+          <span>Mango Sorbet</span>
+        </a>
       </div>
     </div>
   </div>
@@ -240,6 +250,85 @@
   </div>
 </section>
 
+
+<!-- ============ EVERY ITEM ============ -->
+<section id="all-items" style="padding-top:0">
+  <div class="wrap">
+    <div class="panel reveal">
+      <div class="panel-title"><span class="eyebrow solo" style="margin:0">Every item, in detail</span></div>
+      <p class="center" style="color:var(--muted);margin:-.4rem auto 2rem;max-width:52ch">Each one tasted and chosen by the owner
+        before it earned a place on the board. Tap any item for the full story.</p>
+      <div class="grid g4">
+        <a class="card" href="item-dubai-cup.html">
+          <div class="ph"><img src="assets/img/fruitcup.png" alt="Dubai Cup" loading="lazy"></div>
+          <h3>Dubai Cup</h3><p>Signature</p>
+          <span class="price">$19.49</span>
+        </a>
+        <a class="card" href="item-mini-dubai-cup.html">
+          <div class="ph"><img src="assets/img/fruitcup.png" alt="Mini Dubai Cup" loading="lazy"></div>
+          <h3>Mini Dubai Cup</h3><p>Signature</p>
+          <span class="price">$10.39</span>
+        </a>
+        <a class="card" href="item-milkshake.html">
+          <div class="ph"><img src="assets/img/shakes.png" alt="Milkshake" loading="lazy"></div>
+          <h3>Milkshake</h3><p>Shakes</p>
+          <span class="price">$10.39+</span>
+        </a>
+        <a class="card" href="item-slushy.html">
+          <div class="ph"><img src="assets/img/mangocup.png" alt="Slushy" loading="lazy"></div>
+          <h3>Slushy</h3><p>Frozen drinks</p>
+          <span class="price">$7.79+</span>
+        </a>
+        <a class="card" href="item-two-scoops.html">
+          <div class="ph"><img src="assets/img/scoop_cookies.png" alt="2 Ice Cream Scoops" loading="lazy"></div>
+          <h3>2 Ice Cream Scoops</h3><p>Scoops</p>
+          <span class="price">$10.39</span>
+        </a>
+        <a class="card" href="item-three-scoops.html">
+          <div class="ph"><img src="assets/img/cone_triple.png" alt="3 Ice Cream Scoops" loading="lazy"></div>
+          <h3>3 Ice Cream Scoops</h3><p>Scoops</p>
+          <span class="price">$12.99</span>
+        </a>
+        <a class="card" href="item-vanilla.html">
+          <div class="ph"><img src="assets/img/scoop_vanilla.png" alt="Vanilla" loading="lazy"></div>
+          <h3>Vanilla</h3><p>Flavor</p>
+          <span class="price">In store</span>
+        </a>
+        <a class="card" href="item-cookies-and-cream.html">
+          <div class="ph"><img src="assets/img/scoop_cookies.png" alt="Cookies & Cream" loading="lazy"></div>
+          <h3>Cookies & Cream</h3><p>Flavor</p>
+          <span class="price">In store</span>
+        </a>
+        <a class="card" href="item-strawberry.html">
+          <div class="ph"><img src="assets/img/scoop_strawberry.png" alt="Strawberry" loading="lazy"></div>
+          <h3>Strawberry</h3><p>Flavor</p>
+          <span class="price">In store</span>
+        </a>
+        <a class="card" href="item-chocolate.html">
+          <div class="ph"><img src="assets/img/scoop_chocolate.png" alt="Chocolate" loading="lazy"></div>
+          <h3>Chocolate</h3><p>Flavor</p>
+          <span class="price">In store</span>
+        </a>
+        <a class="card" href="item-mango-sorbet.html">
+          <div class="ph"><img src="assets/img/mangocup.png" alt="Mango Sorbet" loading="lazy"></div>
+          <h3>Mango Sorbet</h3><p>Flavor</p>
+          <span class="price">In store</span>
+        </a>
+        <a class="card" href="item-brownie-sundae.html">
+          <div class="ph"><img src="assets/img/brownie.png" alt="Brownie Sundae" loading="lazy"></div>
+          <h3>Brownie Sundae</h3><p>Sundaes</p>
+          <span class="price">In store</span>
+        </a>
+        <a class="card" href="item-waffle-cone.html">
+          <div class="ph"><img src="assets/img/cone_cookies.png" alt="Waffle Cone" loading="lazy"></div>
+          <h3>Waffle Cone</h3><p>Cones</p>
+          <span class="price">In store</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <div class="wrap"><svg class="divider" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
   <path d="M0 46C140 6 250 54 400 30s230 26 400 4 260-30 400-18"/>
 </svg></div>
@@ -279,9 +368,11 @@
       <a href="https://www.yelp.com/biz/the-ice-cream-shop-fresno" target="_blank" rel="noopener" aria-label="Yelp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11 3.5v8.2L5.4 9.2 6.9 5.4 11 3.5Zm2.2 8.6 4.4-1.9 1.5 3.6-4.4 1.6-1.5-3.3Zm-1.6 2.2 1.2 4.6-3.9.3-.5-4 3.2-.9Zm3.3 1.7 3.6 2.9-2.6 2.9-2.4-4.4 1.4-1.4ZM9.4 12.6l-4.9 1.9L4 11l5.4-.4v2Z"/></svg></a>
     </div>
     <div class="copy">© 2026 The Ice Cream Shop · 2832 N Fowler Ave, Fresno, CA 93727 · (559) 400-9142</div>
+    <div class="credit">Site by <a href="https://www.thevantagemedia.net/" target="_blank" rel="noopener">The Vantage Media</a> &middot; Fresno, CA</div>
   </div>
 </footer>
 
 <script src="assets/js/site.js"></script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

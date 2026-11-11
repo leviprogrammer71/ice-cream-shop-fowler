@@ -26,16 +26,41 @@
   }
 
   /* ---------------- mobile nav ---------------- */
+  var head = document.querySelector('.site-head');
   var burger = document.querySelector('.burger');
   var nav = document.querySelector('.site-head .nav');
+
+  // the drawer pins under the header, which shrinks on scroll — keep them in sync
+  function syncHeadHeight() {
+    if (head) document.documentElement.style.setProperty('--head-h', head.offsetHeight + 'px');
+  }
+  syncHeadHeight();
+  window.addEventListener('resize', syncHeadHeight);
+  if (head) head.addEventListener('transitionend', syncHeadHeight);
+
   if (burger && nav) {
-    burger.addEventListener('click', function () {
-      nav.classList.toggle('open');
-      burger.classList.toggle('open');
-      burger.setAttribute('aria-expanded', nav.classList.contains('open'));
-    });
-    nav.addEventListener('click', function (e) {
-      if (e.target.tagName === 'A') { nav.classList.remove('open'); burger.classList.remove('open'); }
+    // the Order CTA is hidden from the bar on mobile — put it in the drawer
+    var headCta = document.querySelector('.head-cta');
+    if (headCta && !nav.querySelector('.nav-cta')) {
+      var clone = headCta.cloneNode(true);
+      clone.classList.remove('head-cta', 'sm');
+      clone.classList.add('nav-cta');
+      nav.appendChild(clone);
+    }
+
+    function setNav(open) {
+      nav.classList.toggle('open', open);
+      burger.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open);
+      document.body.classList.toggle('nav-open', open);
+      if (open) syncHeadHeight();
+    }
+    burger.addEventListener('click', function () { setNav(!nav.classList.contains('open')); });
+    nav.addEventListener('click', function (e) { if (e.target.closest('a')) setNav(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setNav(false); });
+    // rotating to landscape past the breakpoint must not strand an open drawer
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 860 && nav.classList.contains('open')) setNav(false);
     });
   }
 
@@ -201,13 +226,27 @@
     }
     setActive(0);
 
+    // Below 900px the stage is no longer sticky, so there's no scroll distance to
+    // scrub against. Fall back to a timer while the section is on screen —
+    // otherwise mobile would sit on flavour #1 forever.
+    var autoTimer = null;
+    function canScrub() { return scrub.getBoundingClientRect().height - window.innerHeight > 0; }
+
     window.addEventListener('scroll', function () {
+      if (!canScrub()) return;
       var r = scrub.getBoundingClientRect();
       var total = r.height - window.innerHeight;
-      if (total <= 0) return;
       var p = Math.min(Math.max(-r.top / total, 0), 0.999);
       setActive(Math.floor(p * items.length));
     }, { passive: true });
+
+    new IntersectionObserver(function (e) {
+      var onScreen = e[0].isIntersecting;
+      clearInterval(autoTimer); autoTimer = null;
+      if (onScreen && !canScrub()) {
+        autoTimer = setInterval(function () { setActive((last + 1) % items.length); }, 3000);
+      }
+    }, { threshold: 0.25 }).observe(scrub);
   } else if (scrub) {
     scrub.querySelectorAll('.scrub-item, .scrub-art img, .scrub-dots i').forEach(function (el) { el.classList.add('on'); });
   }
